@@ -2,6 +2,7 @@ import pygame as pg
 import sys
 
 from src.frame import Frame
+import src.cb as  clicking_buffer
 
 
 class Window(Frame):
@@ -18,6 +19,8 @@ class Window(Frame):
 
 		self.win = pg.display.set_mode((width, height))
 
+		self.clicking_buffer = clicking_buffer.Buffer(10)
+
 
 	def close(self):
 		for event in pg.event.get():
@@ -30,7 +33,7 @@ class Window(Frame):
 	def mainloop(self):
 		while(1):
 			self.close()
+			self.clicking_buffer.update()
 			self.draw()
-
 			pg.display.update()
 		

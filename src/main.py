@@ -6,4 +6,4 @@ class VideoEffectDesigner:
 		self.win = gui.Window("Video Effect Designer", 500, 500, 1500, 1000)
 
 	def run(self):
-		pass
+		self.win.mainloop()

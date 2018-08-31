@@ -27,6 +27,9 @@ class Window(Frame):
 			if event.type == pg.QUIT:
 				pg.quit()
 				sys.exit(0)
+		if self.clicking_buffer.long():
+			pg.quit()
+			sys.exit(0)
 
 
 
@@ -35,5 +38,6 @@ class Window(Frame):
 			self.close()
 			self.clicking_buffer.update()
 			self.draw()
+
 			pg.display.update()
 		

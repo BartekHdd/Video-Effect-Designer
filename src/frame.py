@@ -1,6 +1,7 @@
 import pygame as pg
 
 from src.widget import Widget
+import src.draw as draw
 
 class Frame(Widget):
 	def __init__(self, frame, x, y, width, height):
@@ -20,9 +21,9 @@ class Frame(Widget):
 		self.background = (red, green, blue)
 
 	def add_widget(self, widget):
-		self.frame.append(self)
+		self.elements.append(widget)
 
-	def draw(self, translation_x, translation_y):
-		pg.draw.rect(self.win, self.background, (self.x + translation_x, self.y + translation_y, self.width, self.height))
+	def draw(self, window, translation_x, translation_y):
+		pg.draw.rect(window, self.background, (self.x + translation_x, self.y + translation_y, self.width, self.height))
 		for element in self.elements:
-			element.draw()
+			element.draw(window, translation_x+self.x, translation_y+self.y)

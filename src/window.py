@@ -17,7 +17,6 @@ class Window(Frame):
 		self.win = pg.display.set_mode((width, height))
 
 		self.clicking_buffer = clicking_buffer.Buffer(10)
-		self.elements = []
 
 
 	def close(self):
@@ -30,12 +29,11 @@ class Window(Frame):
 			sys.exit(0)
 
 
-
 	def mainloop(self):
 		while(1):
 			self.close()
 			self.clicking_buffer.update()
-			self.draw(0, 0)
+			self.draw(self.win, 0, 0)
 
 			pg.display.update()
 		

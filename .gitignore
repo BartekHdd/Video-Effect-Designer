@@ -3,3 +3,4 @@ cat .gitignore
 *~
 __pycache__/
 __pycache__
+test.py

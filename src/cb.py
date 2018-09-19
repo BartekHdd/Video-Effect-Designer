@@ -24,13 +24,13 @@ class Buffer:
 			self.pressing = pg.mouse.get_pressed()[0]
 
 			first = self.buf[0]
-			last = self.buf[self.size-1
-			
+			last = self.buf[self.size-1]
+
 			if self.long_counter == 50:
 				self.long_click = True
 				self.one_click = False
-				self.double_click = False]
-				
+				self.double_click = False
+
 			elif first[0] and last[0]:
 				self.long_counter += 1
 				self.long_click = False
@@ -58,10 +58,10 @@ class Buffer:
 
 	def state(self):
 		return {
-		"one_click" : self.one_click,
-		"double_click" : self.double_click,
-		"long_click" : self.long_click,
-		"x" : pg.mouse.get_pos()[0],
-		"y"	: pg.mouse.get_pos()[1],
-		"pressing" : self.pressing
+		"one_click":self.one_click,
+		"double_click":self.double_click,
+		"long_click":self.long_click,
+		"x":pg.mouse.get_pos()[0],
+		"y":pg.mouse.get_pos()[1],
+		"pressing":self.pressing
 		}

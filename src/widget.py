@@ -7,6 +7,7 @@ class Widget(object):
 		self.y = y
 		self.width = width
 		self.height = height
+		self.state = "normal"
 
 		#frame.add_widget(self)
 
@@ -47,4 +48,7 @@ class Widget(object):
 
 	def set_background(self, red, green, blue):
 		self.background = (red, green, blue)
+
+	def update():
+		pass
 		

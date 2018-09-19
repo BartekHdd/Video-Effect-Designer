@@ -24,10 +24,9 @@ class Window(Frame):
 			if event.type == pg.QUIT:
 				pg.quit()
 				sys.exit(0)
-		if self.clicking_buffer.long():
-			pg.quit()
-			sys.exit(0)
 
+	def get_mouse(self):
+		return self.clicking_buffer.state()
 
 	def mainloop(self):
 		while(1):

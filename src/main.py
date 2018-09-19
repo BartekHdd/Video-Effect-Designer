@@ -10,6 +10,9 @@ class VideoEffectDesigner:
 		self.menu.set_background(60, 60, 60)
 		self.win.add_widget(self.menu)
 
+		self.b = gui.Button(self.menu, 10, 10, 50, 50)
+		self.menu.add_widget(self.b)
+
 		self.time_line = gui.Frame(self.win, 0, 670, 1500, 330)
 		self.time_line.set_background(60, 60, 60)
 		self.win.add_widget(self.time_line)

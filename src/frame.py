@@ -16,6 +16,9 @@ class Frame(Widget):
 
 	def get_size(self):
 		return (self.width, self.height)
+		
+	def get_mouse(self):
+		return self.frame.get_mouse()
 
 	def set_background(self, red, green, blue):
 		self.background = (red, green, blue)

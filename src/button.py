@@ -41,7 +41,7 @@ class Button(Widget):
 				self.on_double_click()
 				self.qualities = self.press
 			elif mouse["one_click"]:
-				self.one_click()
+				self.on_click()
 				self.qualities = self.press
 			elif mouse["pressing"]:
 				self.qualities = self.press

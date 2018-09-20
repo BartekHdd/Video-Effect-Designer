@@ -15,6 +15,7 @@ class Window(Frame):
 		self.background = (200, 200, 200)
 
 		self.win = pg.display.set_mode((width, height))
+		pg.display.set_caption(name)
 
 		self.clicking_buffer = clicking_buffer.Buffer(10)
 
